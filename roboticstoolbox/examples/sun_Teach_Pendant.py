@@ -112,9 +112,9 @@ if __name__ == "__main__":
     joint_dec=[0,15,12,4.5,2.5,1.5]
     joint_mass = [10,20,6,3,2,1]  # 关节质量
     joint_damping = [2,15 ,10,5,1.5,1] # 关节阻尼
-    joint_stiffness = [10.0 ,10,10,10,10,10] # 关节刚度
+    joint_stiffness = [10.0,10,10,10,10,10] # 关节刚度
     max_velocity = [0.1,0.1,0.1,0.2,0.2,0.2]  # 最大速度限制
-    max_acceleration = [0.1 ,0.1,0.1,0.2,0.2,0.2] # 最大加速度限制
+    max_acceleration = [0.1,0.1,0.1,0.2,0.2,0.2] # 最大加速度限制
     ##可更改为任意一个初始值
     # initpose=[0,-90*np.pi/180,-90*np.pi/180,0,0,0]
     initpose=rtde_r.getTargetQ()
