@@ -1,3 +1,21 @@
+"""
+[sun_ur]
+
+功能：
+[实现静止状态下UR5E机械臂的外力估计，但是估计数值不准，简单实现了碰撞检测,只是实现了234关节，对于156关节尚未调整。]
+作者：
+[sun,https://github.com/cheng9911]
+
+存在的问题：
+[代码目前处于开发阶段，对于外力的采集尚不完善。]
+
+注意事项：
+[请务必一定要先读取数据，看实际估计的力矩和理论力矩的差值。]
+
+许可证：
+[使用UR_rtde，故许可和UR_rtde一致。]
+
+"""
 import roboticstoolbox as rtb
 import numpy as np
 import rtde_receive

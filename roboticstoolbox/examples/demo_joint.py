@@ -1,3 +1,7 @@
+'''
+测试代码：
+
+'''
 import roboticstoolbox as rtb
 import numpy as np
 import rtde_receive
@@ -7,11 +11,11 @@ from scipy.signal import butter, filtfilt
 import sys
 import time
 rtde_r = rtde_receive.RTDEReceiveInterface("192.168.3.101")
-rtde_c = rtde_control.RTDEControlInterface("192.168.3.101")
+# rtde_c = rtde_control.RTDEControlInterface("192.168.3.101")
 robot=rtb.models.DH.sun_white()
 urdf_sun=rtb.models.URDF.UR5()
 while True:
-    Joint_tor=rtde_c.getJointTorques()
+    # Joint_tor=rtde_c.getJointTorques()
     # print("补偿后的机械臂力矩值",Joint_tor)
     q = np.array(rtde_r.getActualQ())
     # print("实际关节角q", q)
@@ -27,7 +31,7 @@ while True:
 
     TheoryTorques = robot.rne(q, qd, qdd)
     # print("理论计算的机械臂力矩值", TheoryTorques)
-    Joint_tor = rtde_c.getJointTorques()
+    # Joint_tor = rtde_c.getJointTorques()
     # print("补偿后的机械臂力矩值", Joint_tor)
     # # Assuming you have a list of current values called 'current_data'
     # filter = RealTimeButterworthFilter(order=4, cutoff_freq=2.0, sampling_freq=100.0)
@@ -66,4 +70,4 @@ while True:
             # print("i",Jointcurrent[i]-Initcurrent[i])
     # print("估计电流值",Estimated_Current)
     # print("估计输出力矩", Estimated_Torq)
-    time.sleep(0.5)
+    # time.sleep(0.5)

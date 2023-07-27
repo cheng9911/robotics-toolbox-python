@@ -1,3 +1,22 @@
+"""
+[sun_action]
+
+功能：
+[实现静止状态下UR5E机械臂的数据采集。以而关节为例，每次运动0.01rad随后采集电流和计算理论力矩，通过matlab的数据拟合工具cftool（终端输入即可）进行数据拟合求取拟合参数]
+
+作者：
+[sun,https://github.com/cheng9911]
+
+存在的问题：
+[代码目前处于开发阶段，对于外力的采集尚不完善。]
+
+注意事项：
+[请务必一定要先读取数据，看实际估计的力矩和理论力矩的差值。]
+
+许可证：
+[使用UR_rtde，故许可和UR_rtde一致。]
+
+"""
 import roboticstoolbox as rtb
 import numpy as np
 import rtde_receive

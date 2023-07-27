@@ -1,3 +1,22 @@
+"""
+[sun_white]
+
+功能：
+[重新矫正DH参数】
+
+作者：
+[sun,https://github.com/cheng9911]
+
+存在的问题：
+[代码目前处于开发阶段，对于外力的采集尚不完善。]
+
+注意事项：
+[请务必一定要先读取数据，看实际估计的力矩和理论力矩的差值。]
+
+许可证：
+[使用UR_rtde，故许可和UR_rtde一致。]
+
+"""
 import numpy as np
 from roboticstoolbox import DHRobot, RevoluteDH
 from spatialmath import SE3
