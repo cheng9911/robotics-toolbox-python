@@ -45,7 +45,7 @@ class UR5(Robot):
             urdf_filepath=urdf_filepath,
         )
 
-        self.qr = np.array([np.pi, 0, 0, 0, np.pi / 2, 0])
+        self.qr = np.array([-np.pi, 0, 0, 0, -np.pi / 2, 0])
         self.qz = np.zeros(6)
 
         self.addconfiguration("qr", self.qr)

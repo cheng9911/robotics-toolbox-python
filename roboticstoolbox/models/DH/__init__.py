@@ -22,7 +22,7 @@ from roboticstoolbox.models.DH.TwoLink import TwoLink
 from roboticstoolbox.models.DH.Hyper3d import Hyper3d
 from roboticstoolbox.models.DH.P8 import P8
 from roboticstoolbox.models.DH.AL5D import AL5D
-
+from roboticstoolbox.models.DH.sun_white import sun_white
 
 __all__ = [
     'Panda',
@@ -49,4 +49,5 @@ __all__ = [
     'TwoLink',
     'P8',
     'AL5D',
+    'sun_white',
 ]
