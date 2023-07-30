@@ -103,6 +103,8 @@ Estimated_Torq=np.zeros(6)
 # while True:
 Jointcurrent=np.array(rtde_r.getActualCurrent())
 print("实际读取的机械臂电流",Jointcurrent)
+# [ 0.52537906 -6.61384821 -2.41838694 -0.15485784 -0.02628734  0.05303734]
+#[ 4.03674483e-01 -5.79919910e+00 -2.08874512e+00 -1.40091658e-01 -4.24335245e-04  3.26863602e-02]
 for i in range(6):
     Estimated_Current[i]=(Jointcurrent[i]-Initcurrent[i])
     Estimated_Torq[i]=(Jointcurrent[i]-Initcurrent[i])*K[i]-TheoryTorques[i]
